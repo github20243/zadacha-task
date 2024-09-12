@@ -42,15 +42,11 @@ const GaveUp = () => {
 
 export default GaveUp;
 
-const Wrapper = styled(Box)(({theme}) => ({
+const Wrapper = styled(Box)(() => ({
   margin: "0 auto",
   textAlign: "center",
   width: "100%",
   padding: "20px",
-		[theme.breakpoints.down('sm')]:{
-			width:"200px",
-			border:"1px solid black"
-		}
 }));
 
 const SearchInput = styled(TextField)(() => ({
@@ -66,22 +62,18 @@ const StyledBox = styled(Box)(({ theme }) => ({
   width: "100%",
   maxWidth: "1440px",
   margin: "0 auto", // Центрируем контейнер
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("lg")]: {
     gridTemplateColumns: "repeat(3, 1fr)", // 3 колонки при меньшем экране
   },
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     gridTemplateColumns: "repeat(2, 1fr)", // 2 колонки при экране среднего размера
     padding: "40px 0", // Убираем отступ слева и справа
   },
 }));
 
-const StyledContainerCart = styled("div")(({theme}) => ({
+const StyledContainerCart = styled("div")(() => ({
   display: "flex",
   justifyContent: "center",
   padding: "5px",
   gap: "5px",
-	[theme.breakpoints.down("md")]: {
-    gridTemplateColumns: "repeat(2, 1fr)", // 2 колонки при экране среднего размера
-    padding: "40px 0", // Убираем отступ слева и справа
-  },
 }));
