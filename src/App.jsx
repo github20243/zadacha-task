@@ -5,10 +5,10 @@ import { styled } from "@mui/material";
 
 const App = () => {
 	return (
-		<StyledBox>
-			{/* <SideBar /> */}
-			<GaveUp />
-		</StyledBox>
+		// <StyledBox>
+		// 	{/* <SideBar /> */}
+		// </StyledBox>
+  <GaveUp />
 	);
 	ы;
 };

@@ -14,8 +14,8 @@ const Cards = ({ name, percentage, imageSrc }) => {
 export default Cards;
 
 const StyledCard = styled(Card)(({ theme }) => ({
-	width: "190px", // Ширина по умолчанию
-	height: "230px", // Высота по умолчанию
+	width: "190px",
+	height: "230px",
 	background:
 		"linear-gradient(180deg, #F8F7FD 0%, #AFDBC4 49.49%, #BDC0EB 100%)",
 	borderRadius: "43px",
@@ -24,12 +24,12 @@ const StyledCard = styled(Card)(({ theme }) => ({
 	justifyContent: "center",
 	flexDirection: "column",
 	[theme.breakpoints.down("sm")]: {
-		width: "180px", // Уменьшенная ширина для мобильных экранов
-		height: "220px", // Уменьшенная высота для мобильных экранов
+		width: "180px",
+		height: "220px",
 	},
 	[theme.breakpoints.down("xs")]: {
-		width: "160px", // Еще меньше ширина для очень маленьких экранов
-		height: "200px", // Еще меньше высота для очень маленьких экранов
+		width: "160px",
+		height: "200px",
 	},
 }));
 
