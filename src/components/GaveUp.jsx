@@ -42,15 +42,15 @@ const GaveUp = () => {
 
 export default GaveUp;
 
-const Wrapper = styled(Box)(({ theme }) => ({
+const Wrapper = styled(Box)(({theme}) => ({
   margin: "0 auto",
   textAlign: "center",
   width: "100%",
   padding: "20px",
-  [theme.breakpoints.down("sm")]: {
-    width: "200px",
-    border: "1px solid black",
-  },
+		[theme.breakpoints.down('sm')]:{
+			width:"200px",
+			border:"1px solid black"
+		}
 }));
 
 const SearchInput = styled(TextField)(() => ({
@@ -60,29 +60,28 @@ const SearchInput = styled(TextField)(() => ({
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(5, 1fr)",
+  gridTemplateColumns: "repeat(5, 1fr)", // 5 колонок по умолчанию
   gap: "16px",
-  padding: "40px 0",
+  padding: "40px 0", // Убираем отступ слева и справа
   width: "100%",
   maxWidth: "1440px",
-  margin: "0 auto",
+  margin: "0 auto", // Центрируем контейнер
   [theme.breakpoints.down("sm")]: {
-    gridTemplateColumns: "repeat(2, 1fr)", // Изменяем на 2 колонки для мобильного
-    padding: "20px 0", // Уменьшаем отступы для мобильного устройства
+    gridTemplateColumns: "repeat(3, 1fr)", // 3 колонки при меньшем экране
+  },
+  [theme.breakpoints.down("sm")]: {
+    gridTemplateColumns: "repeat(2, 1fr)", // 2 колонки при экране среднего размера
+    padding: "40px 0", // Убираем отступ слева и справа
   },
 }));
 
-const StyledContainerCart = styled("div")(({ theme }) => ({
+const StyledContainerCart = styled("div")(({theme}) => ({
   display: "flex",
-  flexDirection: "column", // Вертикальный стек
-  alignItems: "center", // Центрируем по горизонтали
-  justifyContent: "center", // Центрируем по вертикали
+  justifyContent: "center",
   padding: "5px",
   gap: "5px",
-  [theme.breakpoints.down("md")]: {
-    border: "1px solid black",
-  },
-  [theme.breakpoints.down("sm")]: {
-    maxWidth: "100%", // Используем всё доступное пространство на мобильных устройствах
+	[theme.breakpoints.down("md")]: {
+    gridTemplateColumns: "repeat(2, 1fr)", // 2 колонки при экране среднего размера
+    padding: "40px 0", // Убираем отступ слева и справа
   },
 }));
