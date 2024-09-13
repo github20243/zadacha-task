@@ -80,7 +80,6 @@ const StyledContainerCart = styled("div")(({theme}) => ({
   padding: "5px",
   gap: "5px",
   [theme.breakpoints.down("sm")]: {
-     display: "flex",
-  justifyContent: "center"
+    marginLeft: "-20px"
   }
 }));
