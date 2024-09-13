@@ -146,7 +146,7 @@ const SearchInput = styled(TextField)(({ theme }) => ({
 	marginBottom: "20px",
 	width: "300px",
 	[theme.breakpoints.down("sm")]: {
-		marginLeft: "70px",
+		// marginLeft: "70px",
 	},
 }));
 
