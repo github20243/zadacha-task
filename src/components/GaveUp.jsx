@@ -42,11 +42,14 @@ const GaveUp = () => {
 
 export default GaveUp;
 
-const Wrapper = styled(Box)(() => ({
+const Wrapper = styled(Box)(({theme}) => ({
   margin: "0 auto",
   textAlign: "center",
-  width: "100%",
-  padding: "20px",
+  maxWidth: "100%",
+  padding: "20px", 
+  [theme.breakpoints.down("sm")]: {
+    width: "100%"
+  }
 }));
 
 const SearchInput = styled(TextField)(() => ({
@@ -56,24 +59,27 @@ const SearchInput = styled(TextField)(() => ({
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(5, 1fr)", // 5 колонок по умолчанию
+  gridTemplateColumns: "repeat(5, 1fr)",
   gap: "16px",
-  padding: "40px 0", // Убираем отступ слева и справа
+  padding: "40px 0", 
   width: "100%",
   maxWidth: "1440px",
-  margin: "0 auto", // Центрируем контейнер
-  [theme.breakpoints.down("lg")]: {
-    gridTemplateColumns: "repeat(3, 1fr)", // 3 колонки при меньшем экране
+  margin: "0 auto", 
+  [theme.breakpoints.down("sm")]: {
+    gridTemplateColumns: "repeat(3, 1fr)", 
   },
-  [theme.breakpoints.down("md")]: {
-    gridTemplateColumns: "repeat(2, 1fr)", // 2 колонки при экране среднего размера
-    padding: "40px 0", // Убираем отступ слева и справа
+  [theme.breakpoints.down("sm")]: {
+    gridTemplateColumns: "repeat(2, 1fr)",
+    padding: "40px 0", 
   },
 }));
 
-const StyledContainerCart = styled("div")(() => ({
+const StyledContainerCart = styled("div")(({theme}) => ({
   display: "flex",
   justifyContent: "center",
   padding: "5px",
   gap: "5px",
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "-20px"
+  }
 }));

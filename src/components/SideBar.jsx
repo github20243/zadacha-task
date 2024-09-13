@@ -12,7 +12,7 @@ const SideBar = () => {
 export default SideBar;
 
 const Styled = styled("div")(({ theme }) => ({
-  width: "297px", // Ширина по умолчанию
+  width: "297px", 
   height: "100vh",
   background: "red",
   display: "flex",
