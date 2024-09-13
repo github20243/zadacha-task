@@ -24,11 +24,11 @@ const StyledCard = styled(Card)(({ theme }) => ({
 	justifyContent: "center",
 	flexDirection: "column",
 	[theme.breakpoints.down("sm")]: {
-		width: "190px",
+		width: "200px",
 		height: "230px",
 	},
 	[theme.breakpoints.down("sm")]: {
-		width: "190px",
+		width: "200px",
 		height: "230px",
 	},
 }));
