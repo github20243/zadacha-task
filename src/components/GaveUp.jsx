@@ -24,7 +24,7 @@ const GaveUp = () => {
   return (
     <Wrapper>
       <SearchInput placeholder="Поиск" variant="outlined" />
-      <hr />
+      <StyledHr />
       <StyledBox>
         {cardsData.map((card) => (
           <StyledContainerCart key={card.id}>
@@ -52,10 +52,19 @@ const Wrapper = styled(Box)(({theme}) => ({
   }
 }));
 
-const SearchInput = styled(TextField)(() => ({
+const SearchInput = styled(TextField)(({theme}) => ({
   marginBottom: "20px",
   width: "300px",
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "70px"
+  }
 }));
+
+const StyledHr = styled("hr")(({theme}) => ({
+  [theme.breakpoints.down("sm")]: {
+    marginLeft: "70px"
+  }
+}))
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: "grid",
@@ -80,6 +89,6 @@ const StyledContainerCart = styled("div")(({theme}) => ({
   padding: "5px",
   gap: "5px",
   [theme.breakpoints.down("sm")]: {
-    marginLeft: "-5px"
+    marginLeft: "-10px"
   }
 }));
