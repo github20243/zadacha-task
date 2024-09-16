@@ -137,20 +137,29 @@ const Wrapper = styled(Box)(({ theme }) => ({
 	textAlign: "center",
 	maxWidth: "100%",
 	padding: "20px",
+	[theme.breakpoints.down("lg")]: {
+		padding: "10px",
+	},
 	[theme.breakpoints.down("sm")]: {
 		width: "100%",
+		padding: "5px",
 	},
 }));
 
 const SearchInput = styled(TextField)(({ theme }) => ({
 	marginBottom: "20px",
 	width: "300px",
+	[theme.breakpoints.down("md")]: {
+		width: "250px",
+	},
 	[theme.breakpoints.down("sm")]: {
-    marginLeft: "60px"
+		width: "200px",
+		marginLeft: "0",
 	},
 }));
 
 const StyledHr = styled("hr")(({ theme }) => ({
+	margin: "20px 0",
 	[theme.breakpoints.down("sm")]: {
 		display: "none",
 	},
@@ -164,12 +173,18 @@ const StyledBox = styled(Box)(({ theme }) => ({
 	width: "100%",
 	maxWidth: "1440px",
 	margin: "0 auto",
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down("lg")]: {
+		gridTemplateColumns: "repeat(4, 1fr)",
+	},
+	[theme.breakpoints.down("md")]: {
 		gridTemplateColumns: "repeat(3, 1fr)",
 	},
 	[theme.breakpoints.down("sm")]: {
 		gridTemplateColumns: "repeat(2, 1fr)",
-		padding: "40px 0",
+		gap: "10px",
+	},
+	[theme.breakpoints.down("xs")]: {
+		gridTemplateColumns: "1fr",
 	},
 }));
 
@@ -177,8 +192,8 @@ const StyledContainerCart = styled("div")(({ theme }) => ({
 	display: "flex",
 	justifyContent: "center",
 	padding: "5px",
-	gap: "5px",
 	[theme.breakpoints.down("sm")]: {
-		marginLeft: "-10px",
+		marginLeft: "0",
+		marginRight: "0",
 	},
 }));
