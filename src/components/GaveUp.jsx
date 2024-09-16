@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "./UI/Cards";
-import { Box, TextField, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 
 const GaveUp = () => {
 	const cardsData = [
@@ -131,46 +131,41 @@ const GaveUp = () => {
 export default GaveUp;
 
 const Wrapper = styled(Box)(({ theme }) => ({
-	margin: "0 auto",
-	// maxWidth: "100%",
-	padding: "10px",
-	width: "100%", // добавить ширину
-	[theme.breakpoints.down("sm")]: {
-			width: "470px", // изменить ширину для малых экранов
-			paddinRight:"5px"// проверьте этот фон
-	},
+  margin: "0 auto",
+  padding: "10px",
+  width: "100%",
+  [theme.breakpoints.down("sm")]: {
+    width: "470px",
+  },
 }));
-
 
 const StyledBox = styled(Box)(({ theme }) => ({
-	display: "grid",
-	gridTemplateColumns: "repeat(5, 1fr)",
-	gap: "16px",
-	padding: "40px 0",
-	maxWidth: "100%", // Убедитесь, что максимальная ширина не вызывает проблем
-	margin: "0 auto",
-	[theme.breakpoints.down("lg")]: {
-			gridTemplateColumns: "repeat(4, 1fr)",
-	},
-	[theme.breakpoints.down("md")]: {
-			gridTemplateColumns: "repeat(3, 1fr)",
-	},
-	[theme.breakpoints.down("sm")]: {
-			gridTemplateColumns: "repeat(2, 1fr)",
-			gap: "0px",
-	},
-	[theme.breakpoints.down("xs")]: {
-			gridTemplateColumns: "1fr",
-	},
+  display: "grid",
+  gridTemplateColumns: "repeat(5, 1fr)",
+  gap: "16px",
+  padding: "40px 0",
+  maxWidth: "1200px",
+  margin: "0 auto",
+  [theme.breakpoints.down("lg")]: {
+    gridTemplateColumns: "repeat(4, 1fr)",
+  },
+  [theme.breakpoints.down("md")]: {
+    gridTemplateColumns: "repeat(3, 1fr)",
+  },
+  [theme.breakpoints.down("sm")]: {
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: "13px",
+  },
+  [theme.breakpoints.down("xs")]: {
+    gridTemplateColumns: "1fr",
+  },
 }));
 
-
 const StyledContainerCart = styled("div")(({ theme }) => ({
-	display: "flex",
-	justifyContent: "center",
-	padding: "5px",
-	[theme.breakpoints.down("sm")]: {
-		marginLeft: "0",
-		padding: "15px",
-	},
+  display: "flex",
+  justifyContent: "center",
+  padding: "5px",
+  [theme.breakpoints.down("sm")]: {
+    padding: "15px",
+  },
 }));
