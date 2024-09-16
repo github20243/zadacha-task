@@ -6,7 +6,6 @@ const Cards = ({ name, percentage, imageSrc }) => {
 		<StyledCard>
 			<StyledAvatar alt={name} src={imageSrc} />
 			<Typography variant="h6">{name}</Typography>
-			<PercentageText>{percentage}%</PercentageText>
 		</StyledCard>
 	);
 };
@@ -23,13 +22,10 @@ const StyledCard = styled(Card)(({ theme }) => ({
 	alignItems: "center",
 	justifyContent: "center",
 	flexDirection: "column",
+
 	[theme.breakpoints.down("sm")]: {
-		width: "220px",
-		height: "230px",
-	},
-	[theme.breakpoints.down("sm")]: {
-		width: "190px",
-		height: "214px",
+		width: "190x",
+		height: "220px",
 	},
 }));
 

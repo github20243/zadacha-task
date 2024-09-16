@@ -113,8 +113,6 @@ const GaveUp = () => {
 
 	return (
 		<Wrapper>
-			<SearchInput placeholder="Поиск" variant="outlined" />
-			<StyledHr />
 			<StyledBox>
 				{cardsData.map((card) => (
 					<StyledContainerCart key={card.id}>
@@ -134,59 +132,38 @@ export default GaveUp;
 
 const Wrapper = styled(Box)(({ theme }) => ({
 	margin: "0 auto",
-	textAlign: "center",
-	maxWidth: "100%",
-	padding: "20px",
-	[theme.breakpoints.down("lg")]: {
-		padding: "10px",
-	},
+	// maxWidth: "100%",
+	padding: "10px",
+	width: "100%", // добавить ширину
 	[theme.breakpoints.down("sm")]: {
-		width: "100%",
-		padding: "5px",
+			width: "470px", // изменить ширину для малых экранов
+			paddinRight:"5px"// проверьте этот фон
 	},
 }));
 
-const SearchInput = styled(TextField)(({ theme }) => ({
-	marginBottom: "20px",
-	width: "300px",
-	[theme.breakpoints.down("md")]: {
-		width: "250px",
-	},
-	[theme.breakpoints.down("sm")]: {
-		width: "200px",
-		marginLeft: "0",
-	},
-}));
-
-const StyledHr = styled("hr")(({ theme }) => ({
-	margin: "20px 0",
-	[theme.breakpoints.down("sm")]: {
-		display: "none",
-	},
-}));
 
 const StyledBox = styled(Box)(({ theme }) => ({
 	display: "grid",
 	gridTemplateColumns: "repeat(5, 1fr)",
 	gap: "16px",
 	padding: "40px 0",
-	width: "100%",
-	maxWidth: "1440px",
+	maxWidth: "100%", // Убедитесь, что максимальная ширина не вызывает проблем
 	margin: "0 auto",
 	[theme.breakpoints.down("lg")]: {
-		gridTemplateColumns: "repeat(4, 1fr)",
+			gridTemplateColumns: "repeat(4, 1fr)",
 	},
 	[theme.breakpoints.down("md")]: {
-		gridTemplateColumns: "repeat(3, 1fr)",
+			gridTemplateColumns: "repeat(3, 1fr)",
 	},
 	[theme.breakpoints.down("sm")]: {
-		gridTemplateColumns: "repeat(2, 1fr)",
-		gap: "10px",
+			gridTemplateColumns: "repeat(2, 1fr)",
+			gap: "0px",
 	},
 	[theme.breakpoints.down("xs")]: {
-		gridTemplateColumns: "1fr",
+			gridTemplateColumns: "1fr",
 	},
 }));
+
 
 const StyledContainerCart = styled("div")(({ theme }) => ({
 	display: "flex",
@@ -194,6 +171,6 @@ const StyledContainerCart = styled("div")(({ theme }) => ({
 	padding: "5px",
 	[theme.breakpoints.down("sm")]: {
 		marginLeft: "0",
-		marginRight: "0",
+		padding: "15px",
 	},
 }));
