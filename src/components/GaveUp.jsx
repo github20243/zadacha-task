@@ -152,7 +152,6 @@ const SearchInput = styled(TextField)(({ theme }) => ({
 
 const StyledHr = styled("hr")(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
-		// marginLeft: "70px"
 		display: "none",
 	},
 }));
