@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import GaveUp from "./components/GaveUp";
 import SideBar from "./components/SideBar";
 import { styled } from "@mui/material";
+import { GaveUpPage } from "./components/GaveUp";
 
 const App = () => {
 	return (
 		// <StyledBox>
 		// 	{/* <SideBar /> */}
 		// </StyledBox>
-  <GaveUp />
+  <GaveUpPage />
 	);
 	ы;
 };
