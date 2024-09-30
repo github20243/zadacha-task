@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, styled, TextField, Button, useMediaQuery, useTheme } from '@mui/material';
+import { Box, styled, TextField, Button, useMediaQuery, useTheme, backdropClasses } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Cards from './UI/Cards';
 import { cardsData } from '../data/data';
@@ -50,9 +50,41 @@ const Wrapper = styled(Box)({
 const ContentWrapper = styled(Box)(({ theme }) => ({
   width: '1200px',
   position: 'relative',
-  [theme.breakpoints.down('lg')]: {
-    width: '100%',
-    padding: '0 px',
+  [theme.breakpoints.down('sm')]: {
+    width: '100wh',
+    padding: '0 10px',
+    marginLeft: "120px"
+  },
+}));
+const SearchContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  width: "100%",
+  marginBottom: '20px',
+  marginTop: '30px',
+  position: 'relative',
+  [theme.breakpoints.down('sm')]: {
+    width: "100%",
+    justifyContent: "space-between",
+    gap: "20px",
+  },
+}));
+
+const StyledTextField = styled(TextField)(({ theme }) => ({
+  width: '256px',
+  height: '42px',
+  '& .MuiOutlinedInput-root': {
+    borderRadius: '8px',
+    height: '42px',
+    border: '1px solid #000000',
+  },
+  '& .MuiInputBase-input': {
+    padding: '10px 14px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '180px',
+    marginTop: '40px',
   },
 }));
 
@@ -66,41 +98,9 @@ const ClearButton = styled(Button)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     width: '120px',
-    padding: '6px 12px',
+    padding: '10px 19px',
     fontSize: '0.8rem',
-    position: 'relative',
-    left: '30px',
-    top: '15px'
-  },
-}));
-
-const SearchContainer = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginBottom: '20px',
-  marginTop: '30px',
-  [theme.breakpoints.down('sm')]: {
-    justifyContent: 'space-between',
-  },
-}));
-
-const StyledTextField = styled(TextField)(({ theme }) => ({
-  width: '256px',
-  height: '42px',
-  '& .MuiOutlinedInput-root': {
-    borderRadius: '8px',
-    height: '42px',
-    border: '1px solid #000000'
-  },
-  '& .MuiInputBase-input': {
-    padding: '10px 14px',
-  },
-  [theme.breakpoints.down('sm')]: {
-    width: '180px',
-    position: 'relative',
-    left: '30px',
-    top: '15px'
+    marginTop: "40px"
   },
 }));
 
@@ -142,8 +142,8 @@ const StyledDiv = styled('div')(({ theme }) => ({
   position: 'absolute', 
   top: '100px',
   [theme.breakpoints.down('sm')]: {
-    marginLeft: '30px',
+    marginLeft: '-10px',
     width: '100%',
-    top: '110px',
+    top: '140px',
   },
 }));
